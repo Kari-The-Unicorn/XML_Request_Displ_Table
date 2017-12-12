@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CATALOG>
+  <HEROESLIST>
+    <CHAR>Spider-Man</CHAR>
+    <NAME>Peter Benjamin Parker</NAME>
+    <INFO>http://marvel.com/characters/54/spider-man</INFO>
+  </HEROESLIST>
+  <HEROESLIST>
+    <CHAR>Hulk</CHAR>
+    <NAME>Robert Bruce Banner</NAME>
+    <INFO>http://marvel.com/characters/25/hulk</INFO>
+  </HEROESLIST>
+  <HEROESLIST>
+    <CHAR>Iron Man</CHAR>
+    <NAME>Anthony Edward "Tony" Stark</NAME>
+    <INFO>http://marvel.com/characters/29/iron_man</INFO>
+  </HEROESLIST>
+  <HEROESLIST>
+    <CHAR>Thor</CHAR>
+    <NAME>Thor Odinson</NAME>
+    <INFO>http://marvel.com/characters/60/thor</INFO>
+  </HEROESLIST>
+  <HEROESLIST>
+    <CHAR>Wolverine</CHAR>
+    <NAME>James Howlett</NAME>
+    <INFO>http://marvel.com/characters/66/wolverine</INFO>
+  </HEROESLIST>
+  <HEROESLIST>
+    <CHAR>Black Widow</CHAR>
+    <NAME>Natasha Romanova</NAME>
+    <INFO>http://marvel.com/characters/6/black_widow</INFO>
+  </HEROESLIST>
+</CATALOG>

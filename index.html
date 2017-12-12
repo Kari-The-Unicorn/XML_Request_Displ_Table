@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="favicon.ico">
+    <title>Superheroes Lister</title>
+    <!-- Bootstrap core CSS -->
+    <link href="dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="cover.css" rel="stylesheet">
+    <link href="main.css" rel="stylesheet">
+  </head>
+<body>
+    <header class="masthead clearfix">
+        <div class="inner">
+          
+        </div>
+      </header>
+    <div class="siter">
+      <div class="img">
+        <img src="images/superheroesImage.jpg" alt="superheroes_image">
+        </div>
+  </div>
+  <div class="main">
+    <main role="main" class="inner cover">
+        <h1 class="cover-heading">Superheroes Lister</h1>
+        <p class="lead">Superheroes Lister is a one-page website that allows you to display table from data in XML file.</p>
+      </main>
+      <div class="inner">
+        
+      
+      <nav class="nav nav-masthead">
+        <a class="nav-link active" href="#" onclick="reload()">Reload</a>
+      </nav>
+    </div>
+      <h2>The XML Request</h2>
+      <button type="button" class="btn btn-lg btn-secondary" onclick="loadDoc()">Get Superheroes List</button>
+      <br><br>
+      <table align="center" style="margin: 0px auto;"id="demo" ></table>
+    </div>
+<script>
+function loadDoc() {
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      myFunction(this);
+    }
+  };
+  xhttp.open("GET", "list.xml", true);
+  xhttp.send();
+}
+function myFunction(xml) {
+  var i;
+  var xmlDoc = xml.responseXML;
+  var table="<tr><th>Character</th><th>Name</th><th>More info</th></tr>";
+  var x = xmlDoc.getElementsByTagName("HEROESLIST");
+  for (i = 0; i <x.length; i++) { 
+    table += "<tr><td>" +
+    x[i].getElementsByTagName("CHAR")[0].childNodes[0].nodeValue +
+    "</td><td>" +
+    x[i].getElementsByTagName("NAME")[0].childNodes[0].nodeValue +
+    "</td><td>"+
+    x[i].getElementsByTagName("INFO")[0].childNodes[0].nodeValue +
+    "</td></tr>";
+  }
+  document.getElementById("demo").innerHTML = table;
+}
+function reload() {
+    location.reload();
+};   
+</script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="assets/js/vendor/jquery.min.js"><\/script>')</script>
+    <script src="assets/js/vendor/popper.min.js"></script>
+    <script src="dist/css/bootstrap.min.js"></script>
+</body>
+</html>
