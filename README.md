@@ -21,5 +21,5 @@ Created with:
 
 Recommended to open in Mozilla Firefox
 
-Check out the page: 
+Check out the page:  https://kari-the-unicorn.github.io/XML_Request_Displ_Table/
 
