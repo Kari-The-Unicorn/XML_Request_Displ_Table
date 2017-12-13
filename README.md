@@ -2,6 +2,7 @@
 data from XML file displayed in table 
 
 Features:
+
 ●	displaying table with info requested from XML file
 
 ●	responsive, friendly to many devices
